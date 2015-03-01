@@ -1,0 +1,3 @@
+<div class="formbox_button">
+	<a href="<?= $this->strLink; ?>" onclick="Backend.openModalIframe({'width': 500, 'title':'<?= $this->strButtonText; ?>','url': this.href});return false"><?= $this->strButtonText; ?></a>
+</div>

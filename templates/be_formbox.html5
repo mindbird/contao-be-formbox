@@ -1,0 +1,24 @@
+<div class="formbox">
+	<?php if ($this->strMessageSent == '') { ?>
+	<form action="<?= $this->strFormUrl; ?>" method="post">
+		<input type="hidden" name="REQUEST_TOKEN" value="<?= REQUEST_TOKEN; ?>">
+		<input type="hidden" name="username" value="<?= $this->strUser; ?>">
+		<input type="hidden" name="url" value="<?= $this->strUrl; ?>">
+		<input type="hidden" name="FORM_SUBMIT" value="formbox">
+		<div class="row">
+			<?= $this->strFormboxMessage; ?>
+		</div>
+		<div class="row">
+			<h3><label>Nachricht</label></h3>
+			<textarea name="message" class="tl_textarea"></textarea>
+		</div>
+		<div class="row">
+			<input type="submit" value="Absenden" class="tl_submit">
+		</div>
+	</form>
+	<?php 
+	} else {
+		print $this->strMessageSent;
+	} 
+	?>
+</div>
