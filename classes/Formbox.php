@@ -30,7 +30,7 @@ class Formbox extends \BackendModule {
             $objEmail->sendTo($GLOBALS['TL_CONFIG']['be_formbox_email']);
             $objTemplate->strMessageSent = $GLOBALS['TL_CONFIG']['be_formbox_message_sent'];
         }
-        $objTemplate->strFormUrl = 'contao/main.php?do=settings&key=be-formbox&nb=1&popup=1'; 
+        $objTemplate->strFormUrl = 'contao/main.php?do=undo&key=be-formbox&nb=1&popup=1'; 
         $objTemplate->strUrl = base64_decode(\Input::get('link'));
         $objTemplate->strFormboxMessage = $GLOBALS['TL_CONFIG']['be_formbox_message'];
         return $objTemplate->parse();
