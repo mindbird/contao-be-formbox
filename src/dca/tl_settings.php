@@ -1,5 +1,4 @@
 <?php
-
 $GLOBALS['TL_DCA']['tl_settings']['fields']['be_formbox_button_text'] = array(
     'label' => &$GLOBALS['TL_LANG']['tl_settings']['be_formbox_button_text'],
     'exclude' => true,
@@ -29,6 +28,7 @@ $GLOBALS['TL_DCA']['tl_settings']['fields']['be_formbox_message'] = array(
     'eval' => array(
         'mandatory' => true,
         'rte' => 'tinyMCE',
+        'explanation' => 'insertTags',
         'tl_class' => 'clr'
     )
 );
@@ -40,11 +40,12 @@ $GLOBALS['TL_DCA']['tl_settings']['fields']['be_formbox_message_sent'] = array(
     'eval' => array(
         'mandatory' => true,
         'rte' => 'tinyMCE',
+        'explanation' => 'insertTags',
         'tl_class' => 'clr'
     )
 );
 
-if (substr($GLOBALS['TL_DCA']['tl_settings']['palettes']['default'], -1) != ';') {
+if (substr($GLOBALS['TL_DCA']['tl_settings']['palettes']['default'], - 1) != ';') {
     $GLOBALS['TL_DCA']['tl_settings']['palettes']['default'] .= ';';
 }
 $GLOBALS['TL_DCA']['tl_settings']['palettes']['default'] .= '{be_formbox_lgend},be_formbox_button_text,be_formbox_email,be_formbox_message,be_formbox_message_sent;';
