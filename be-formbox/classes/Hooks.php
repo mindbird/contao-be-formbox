@@ -19,3 +19,5 @@ class Hooks
         return $content;
     }
 }
+
+?>
