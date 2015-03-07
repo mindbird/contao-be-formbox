@@ -28,9 +28,9 @@ $GLOBALS['TL_DCA']['tl_settings']['fields']['be_formbox_message'] = array(
     'eval' => array(
         'mandatory' => true,
         'rte' => 'tinyMCE',
-        'explanation' => 'insertTags',
-        'tl_class' => 'clr'
-    )
+        'helpwizard' => true
+    ),
+    'explanation' => 'insertTags'
 );
 
 $GLOBALS['TL_DCA']['tl_settings']['fields']['be_formbox_message_sent'] = array(
@@ -40,9 +40,9 @@ $GLOBALS['TL_DCA']['tl_settings']['fields']['be_formbox_message_sent'] = array(
     'eval' => array(
         'mandatory' => true,
         'rte' => 'tinyMCE',
-        'explanation' => 'insertTags',
-        'tl_class' => 'clr'
-    )
+        'helpwizard' => true
+    ),
+    'explanation' => 'insertTags'
 );
 
 if (substr($GLOBALS['TL_DCA']['tl_settings']['palettes']['default'], - 1) != ';') {
