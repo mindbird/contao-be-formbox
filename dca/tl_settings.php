@@ -27,10 +27,7 @@ $GLOBALS['TL_DCA']['tl_settings']['fields']['be_formbox_message'] = array(
     'inputType' => 'textarea',
     'eval' => array(
         'mandatory' => true,
-        'rte' => 'tinyMCE',
-        'helpwizard' => true
     ),
-    'explanation' => 'insertTags'
 );
 
 $GLOBALS['TL_DCA']['tl_settings']['fields']['be_formbox_message_sent'] = array(
@@ -39,10 +36,7 @@ $GLOBALS['TL_DCA']['tl_settings']['fields']['be_formbox_message_sent'] = array(
     'inputType' => 'textarea',
     'eval' => array(
         'mandatory' => true,
-        'rte' => 'tinyMCE',
-        'helpwizard' => true
     ),
-    'explanation' => 'insertTags'
 );
 
 if (substr($GLOBALS['TL_DCA']['tl_settings']['palettes']['default'], - 1) != ';') {
