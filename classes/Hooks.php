@@ -14,7 +14,7 @@ class Hooks
             if (! \Input::get('popup')) {
                 $content = preg_replace('~<body[^>]*>~', '$0' . $objTemplate->parse(), $content);
             }
-            $content = str_replace('</head>', '<link rel="stylesheet" href="/system/modules/be-formbox/assets/css/backend.css"></head>', $content);
+            $content = str_replace('</head>', '<link rel="stylesheet" href="system/modules/be-formbox/assets/css/backend.css"></head>', $content);
         }
         return $content;
     }
