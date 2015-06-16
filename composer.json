@@ -3,8 +3,13 @@
   "description": "Die Erweiterung bietet Backendbenutzern die Möglichkeit über ein Formular Kontakt mit z.B. dem Support aufzunehmen.",
   "minimum-stability": "stable",
   "license": "proprietary",
-  "keywords":["contao", "Kontakt", "Support", "Anregungen"],
-  "type":"contao-module",
+  "keywords": [
+    "contao",
+    "Kontakt",
+    "Support",
+    "Anregungen"
+  ],
+  "type": "contao-module",
   "authors": [
     {
       "name": "mindbird",
@@ -18,8 +23,16 @@
   "extra": {
     "contao": {
       "sources": {
-        "src/system/modules/be-formbox": "system/modules/be-formbox"
+        "contao": "system/modules/be-formbox"
       }
     }
+  },
+  "autoload": {
+    "psr-4": {
+      "BeFormbox\\": "src/"
+    }
+  },
+  "replace": {
+    "contao-legacy/be-formbox": "self.version"
   }
 }
