@@ -11,14 +11,12 @@ class Formbox  {
             $objDate = new \Date();
             $objEmail = new \Email();
             $objEmail->subject = $GLOBALS['TL_CONFIG']['websiteTitle'] . ' - ' . $GLOBALS['TL_CONFIG']['be_formbox_button_text'];
-            $strHtml = '<p>User: ' . $objUser->username . '</p>';
+            $strHtml = '<p>User: ' . $objUser->username . ' (' . $objUser->email . ')</p>';
             $strHtml .= '<p>Site: ' . \Input::post('url') . '</p>';
             $strHtml .= '<p>Datum: ' . $objDate->datim . '</p>';
             $strHtml .= '<p>Message: ' . \Input::post('message') . '</p>';
             $objEmail->html =  $strHtml;
-            $objEmail->fromName = $objUser->name;
-            $objEmail->from =  $objUser->email;
-            //$objEmail->replyTo($objUser->name . ' <' . $objUser->email . '>');
+            $objEmail->replyTo($objUser->name . ' <' . $objUser->email . '>');
             $objEmail->sendTo($GLOBALS['TL_CONFIG']['be_formbox_email']);
             $objTemplate->strMessageSent = $GLOBALS['TL_CONFIG']['be_formbox_message_sent'];
         }
